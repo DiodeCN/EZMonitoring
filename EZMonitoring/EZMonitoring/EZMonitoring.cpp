@@ -155,8 +155,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         break;
     default:
         return DefWindowProc(hWnd, message, wParam, lParam);
-    }
-    return 0;
+    }    return 0;
 }
 
 // “关于”框的消息处理程序。

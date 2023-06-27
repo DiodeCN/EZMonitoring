@@ -5,6 +5,8 @@
 #include "EZMonitoring.h"
 
 #define MAX_LOADSTRING 100
+#define IDM_SWITCH_CAMERA 104 // 添加到你的资源头文件中
+
 
 // 全局变量:
 HINSTANCE hInst;                                // 当前实例
@@ -136,6 +138,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 break;
             case IDM_EXIT:
                 DestroyWindow(hWnd);
+                break;
+            case IDM_SWITCH_CAMERA: // 添加这一行来处理新的菜单项
+                SwitchCamera(); // 这是你需要实现的一个函数，用于切换摄像头
                 break;
             default:
                 return DefWindowProc(hWnd, message, wParam, lParam);

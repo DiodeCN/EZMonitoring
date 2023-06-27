@@ -5,6 +5,8 @@
 #include "EZMonitoring.h"
 
 #define MAX_LOADSTRING 100
+#define IDM_SWITCH_CAMERA 104 // 添加到你的资源头文件中
+
 
 // 全局变量:
 HINSTANCE hInst;                                // 当前实例
@@ -155,8 +157,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         break;
     default:
         return DefWindowProc(hWnd, message, wParam, lParam);
-    }
-    return 0;
+    }    return 0;
 }
 
 // “关于”框的消息处理程序。
